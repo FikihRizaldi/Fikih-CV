@@ -16,4 +16,6 @@ import Contact from '@/components/Contact.vue';
 <div v-animate-on-scroll><Projects /></div>
 <div v-animate-on-scroll><Contact /></div>
 </main>
-</div></template>
+</div>
+
+</template>

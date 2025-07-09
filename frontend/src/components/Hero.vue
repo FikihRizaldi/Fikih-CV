@@ -1,28 +1,53 @@
+<script setup>
+import { onMounted } from 'vue'
+import Typed from 'typed.js'
+
+onMounted(() => {
+  new Typed('#typed-name', {
+    strings: ['Muhamad Fikih Rizaldi'],
+    typeSpeed: 80,
+    startDelay: 300,
+    showCursor: true,
+    cursorChar: '|'
+  })
+})
+</script>
+
+
+
 <template>
-  <section id="profil" class="container mx-auto px-6 py-20 flex flex- col md:flex-row items-center">
-    <div class="md:w-1/2 mb-10 md:mb-0">
-      <h1
-        class="text-5xl font-bold text-gray-800 mb-4 animate-slide- in-left"
-        style="animation-delay: 200ms"
-      >
-        Halo, Saya <span class="text-blue-600">Muhamad Fikih Rizaldi</span>
+  <section
+    id="profil"
+    class="container mx-auto px-6 py-24 flex flex-col-reverse md:flex-row items-center gap-16"
+  >
+    <!-- LEFT: Text -->
+    <div class="md:w-1/2 text-center md:text-left">
+      <!-- Animated Typing -->
+      <h1 class="text-4xl sm:text-5xl font-bold text-gray-800 leading-tight mb-4">
+        Halo, Saya <span id="typed-name" class="text-indigo-600"></span>
       </h1>
-      <p class="text-xl text-gray-600 mb-8 animate-slide-in-left" style="animation-delay: 400ms">
-        Mahasiswa Teknik Informatika yang bersemangat dalam pengembangan web dan desain antarmuka.
+
+      <!-- Fade-in Description -->
+      <p class="text-lg sm:text-xl text-gray-600 mb-8 animate-fade-in" style="animation-delay: 0.5s">
+        Mahasiswa Teknik Informatika yang antusias membangun aplikasi web modern dengan teknologi
+        terbaik.
       </p>
+
+      <!-- CTA Button -->
       <a
         href="#kontak"
-        class="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 inline-block animate-slide-in-left"
-        style="animation-delay: 600ms"
+        class="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium py-3 px-6 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition transform duration-300"
       >
-        Hubungi Saya
+        Hubungi Saya →
       </a>
     </div>
-    <div class="md:w-1/2 flex justify-center animate-slide-in-right">
+
+    <!-- RIGHT: Image -->
+    <div class="md:w-1/2 flex justify-center animate-fade-in" style="animation-delay: 0.6s">
       <img
-        src="https://lh3.googleusercontent.com/a/ACg8ocI1HeXO_I9Nl-w6-fDrO24FkjyYIQLI2XUhIPfn7663xIxWGOo=s360-c-no"
+        src="https://avatars.githubusercontent.com/u/162108695?v=4"
         alt="Foto Profil"
-        class="w-80 h-80 rounded-full object-cover shadow-lg"
+        class="w-72 h-72 sm:w-80 sm:h-80 rounded-full object-cover shadow-2xl ring-4 ring-indigo-300 transition duration-300"
       />
     </div>
   </section>

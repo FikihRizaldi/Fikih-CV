@@ -4,19 +4,52 @@ const educationHistory = [
   { id: 2, period: '2019 - 2022', institution: 'SMA Walisongo Karangmalang', major: 'MIPA' }
 ];
 
-const skills = [ { name: 'Vue.js', level: 'Mahir' }, { name: 'JavaScript', level:
-'Mahir' },
-{ name: 'Tailwind CSS', level: 'Mahir' }, { name: 'Node.js', level:
-'Menengah' },
+const skills = [
+  {
+    name: 'Vue.js',
+    level: 'Mahir',
+    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg'
+  },
+  {
+    name: 'JavaScript',
+    level: 'Mahir',
+    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
+  },
+  {
+  "name": "Tailwind CSS",
+  "level": "Mahir",
+  "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
+  },
+  {
+    name: 'Node.js',
+    level: 'Menengah',
+    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg'
+  },
+  {
+    name: 'Express.js',
+    level: 'Menengah',
+    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg'
+  },
+  {
+    name: 'PostgreSQL',
+    level: 'Menengah',
+    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg'
+  },
+  {
+    name: 'Git & GitHub',
+    level: 'Mahir',
+    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg'
+  },
+  {
+    name: 'HTML5 & CSS3',
+    level: 'Mahir',
+    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg'
+  }
+];
 
-{ name: 'Express.js', level: 'Menengah' }, { name: 'PostgreSQL',
-level: 'Menengah' },
-{ name: 'Git & GitHub', level: 'Mahir' }, { name: 'HTML5 & CSS3',
-level: 'Mahir' },];
-
-const projects = [ { title: 'Website Toko Online', image:
+const projects = [ { title: 'Website Profile Company Es Kimo', image:
 'https://via.placeholder.com/500x300?text=Proyek+1', description:
-'Platform e-commerce dengan fitur keranjang belanja.', tech: ['Vue.js',
+'Platform profile perusahaan supplier es kristal', tech: ['Vue.js',
 'Express.js', 'PostgreSQL'], link: '#' },
 { title: 'Aplikasi Manajemen Tugas', image:
 'https://via.placeholder.com/500x300?text=Proyek+2', description:

@@ -30,11 +30,11 @@ const skills = [
     level: 'Menengah',
     iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg'
   },
-  {
-    name: 'PostgreSQL',
-    level: 'Menengah',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg'
-  },
+ {
+  name: 'MySQL',
+  level: 'Menengah',
+  iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg'
+},
   {
     name: 'Git & GitHub',
     level: 'Mahir',

@@ -56,9 +56,9 @@ const projects = [
     link: 'https://github.com/bagoongyoo/Final-Project-Web.git'
   },
   {
-    title: 'Aplikasi Manajemen Tugas',
+    title: 'Aplikasi Rental Motor',
     image: 'rental', // ambil dari imageMap
-    description: 'Aplikasi Rental Motor.',
+    description: 'Aplikasi Untuk Rental Motor',
     tech: ['C#'],
     link: 'https://github.com/FikihRizaldi/Sewa_motor.git'
   }

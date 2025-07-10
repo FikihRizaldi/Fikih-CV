@@ -15,7 +15,7 @@ import SectionTitle from './SectionTitle.vue'
 
       <!-- Tombol Email -->
       <a
-        href="mailto:emailanda@example.com"
+        href="mailto:fikihrizaldi31@students.amikom.ac.id"
         class="inline-block bg-indigo-600 text-white font-medium py-3 px-6 rounded-full shadow-md hover:bg-indigo-700 hover:scale-105 transition duration-300 mb-10"
       >
         📧 Kirim Email
@@ -24,7 +24,7 @@ import SectionTitle from './SectionTitle.vue'
       <!-- Sosial Media -->
       <div class="flex justify-center gap-6 mb-8">
         <a
-          href="https://github.com/username"
+          href="https://github.com/FikihRizaldi"
           target="_blank"
           rel="noopener noreferrer"
           class="text-gray-400 hover:text-indigo-400 transition duration-300"
@@ -38,7 +38,7 @@ import SectionTitle from './SectionTitle.vue'
         </a>
 
         <a
-          href="https://linkedin.com/in/username"
+          href="https://www.linkedin.com/in/muhamad-fikih-rizaldi-b04528374/"
           target="_blank"
           rel="noopener noreferrer"
           class="text-gray-400 hover:text-indigo-400 transition duration-300"

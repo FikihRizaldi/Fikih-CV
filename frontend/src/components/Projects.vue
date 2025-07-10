@@ -3,6 +3,19 @@ import { ref, onMounted } from 'vue'
 import axios from 'axios'
 import SectionTitle from './SectionTitle.vue'
 
+// Import semua gambar lokal yang dibutuhkan
+import eskimo from '@/assets/eskimo.png'
+import rental from '@/assets/rental.png'
+
+// Fallback jika tidak ada gambar yang cocok
+const fallbackImage = eskimo
+
+// Mapping nama key ke gambar lokal
+const imageMap = {
+  eskimo,
+  rental
+}
+
 const projects = ref([])
 
 onMounted(async () => {
@@ -28,7 +41,7 @@ onMounted(async () => {
         >
           <!-- Gambar Proyek -->
           <img
-            :src="project.image || 'https://via.placeholder.com/600x300?text=No+Image'"
+            :src="imageMap[project.image] || fallbackImage"
             :alt="`Gambar proyek ${project.title}`"
             class="w-full h-56 object-cover transition duration-300 hover:scale-105"
           />

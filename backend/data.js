@@ -47,12 +47,22 @@ const skills = [
   }
 ];
 
-const projects = [ { title: 'Website Profile Company Es Kimo', image:
-'https://via.placeholder.com/500x300?text=Proyek+1', description:
-'Platform profile perusahaan supplier es kristal', tech: ['Vue.js',
-'Express.js', 'PostgreSQL'], link: '#' },
-{ title: 'Aplikasi Manajemen Tugas', image:
-'https://via.placeholder.com/500x300?text=Proyek+2', description:
-'Aplikasi untuk melacak progres tugas harian.', tech: ['React',
-'Firebase'], link: '#' }];
+const projects = [
+  {
+    title: 'Website Profile Company Es Kimo',
+    image: 'eskimo', // ambil dari imageMap
+    description: 'Platform profile perusahaan supplier es kristal',
+    tech: ['CodeIgniter', 'Bootstrap', 'MySQL'],
+    link: 'https://github.com/bagoongyoo/Final-Project-Web.git'
+  },
+  {
+    title: 'Aplikasi Manajemen Tugas',
+    image: 'rental', // ambil dari imageMap
+    description: 'Aplikasi Rental Motor.',
+    tech: ['C#'],
+    link: 'https://github.com/FikihRizaldi/Sewa_motor.git'
+  }
+];
+
+
 module.exports = { educationHistory, skills, projects };

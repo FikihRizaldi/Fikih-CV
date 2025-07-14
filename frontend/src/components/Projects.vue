@@ -3,24 +3,14 @@ import { ref, onMounted } from 'vue'
 import axios from 'axios'
 import SectionTitle from './SectionTitle.vue'
 
-// Import semua gambar lokal yang dibutuhkan
-import eskimo from '@/assets/eskimo.png'
-import rental from '@/assets/rental.png'
-
-// Fallback jika tidak ada gambar yang cocok
-const fallbackImage = eskimo
-
-// Mapping nama key ke gambar lokal
-const imageMap = {
-  eskimo,
-  rental
-}
+// Fallback jika tidak ada gambar
+const fallbackImage = 'https://via.placeholder.com/400x200?text=Gambar+Tidak+Tersedia'
 
 const projects = ref([])
 
 onMounted(async () => {
   try {
-    const response = await axios.get('http://localhost:3000/api/projects')
+    const response = await axios.get('/api/projects') // GUNAKAN path relatif agar bisa jalan di Vercel
     projects.value = response.data
   } catch (error) {
     console.error(error)
@@ -41,7 +31,7 @@ onMounted(async () => {
         >
           <!-- Gambar Proyek -->
           <img
-            :src="imageMap[project.image] || fallbackImage"
+            :src="project.image || fallbackImage"
             :alt="`Gambar proyek ${project.title}`"
             class="w-full h-56 object-cover transition duration-300 hover:scale-105"
           />

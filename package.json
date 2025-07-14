@@ -1,4 +1,10 @@
 {
+  "name": "fikih-cv",
+  "version": "1.0.0",
+  "description": "Web Portofolio Pribadi",
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@vercel/postgres": "^0.10.0",
@@ -8,16 +14,12 @@
     "express": "^5.1.0",
     "typed.js": "^2.1.0"
   },
-  "name": "fikih-cv",
-  "version": "1.0.0",
-  "description": "\"Web Portofolio Pribadi\"",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FikihRizaldi/Fikih-CV.git"
+    "url": "https://github.com/FikihRizaldi/Fikih-CV.git"
   },
   "keywords": [],
   "author": "",
@@ -25,8 +27,5 @@
   "bugs": {
     "url": "https://github.com/FikihRizaldi/Fikih-CV/issues"
   },
-  "homepage": "https://github.com/FikihRizaldi/Fikih-CV#readme",
-  "devDependencies": {
-    "nodemon": "^3.1.10"
-  }
+  "homepage": "https://github.com/FikihRizaldi/Fikih-CV#readme"
 }

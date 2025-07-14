@@ -5,11 +5,14 @@ import SectionTitle from './SectionTitle.vue'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
+// Fallback jika icon gagal dimuat
+const fallbackImage = 'https://via.placeholder.com/40x40?text=?'
+
 const skills = ref([])
 
 onMounted(async () => {
   try {
-    const response = await axios.get('/api/skills') // GANTI DI SINI
+    const response = await axios.get('/api/skills')
     skills.value = response.data
   } catch (error) {
     console.error(error)
@@ -37,10 +40,10 @@ onMounted(async () => {
         >
           <div class="flex justify-center items-center h-16 mb-4">
             <img
-              v-if="skill.iconUrl"
-              :src="skill.iconUrl"
+              :src="skill.iconUrl || fallbackImage"
               :alt="skill.name"
               class="max-w-[40px] h-auto object-contain"
+              @error="$event.target.src = fallbackImage"
             />
           </div>
           <h3 class="text-base font-semibold text-gray-800 text-center">{{ skill.name }}</h3>

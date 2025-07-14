@@ -9,7 +9,6 @@
     "@fortawesome/fontawesome-free": "^6.7.2",
     "aos": "^2.3.4",
     "typed.js": "^2.1.0"
-<<<<<<< HEAD
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
@@ -25,7 +24,4 @@
     "url": "https://github.com/FikihRizaldi/Fikih-CV/issues"
   },
   "homepage": "https://github.com/FikihRizaldi/Fikih-CV#readme"
-=======
-  }
->>>>>>> parent of 6fa0abe (selesai)
 }

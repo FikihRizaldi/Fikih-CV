@@ -3,20 +3,24 @@ import { ref, onMounted } from 'vue'
 import axios from 'axios'
 import SectionTitle from './SectionTitle.vue'
 
-// URL fallback jika gambar tidak ditemukan atau kosong
+// Import gambar lokal
+import eskimo from '@/assets/eskimo.png'
+import rental from '@/assets/rental.png'
+
+// Mapping nama ke gambar lokal
+const imageMap = {
+  eskimo,
+  rental
+}
+
+// Fallback jika key tidak ditemukan
 const fallbackImage = 'https://via.placeholder.com/400x200?text=Gambar+Tidak+Tersedia'
 
-// State untuk menyimpan proyek
 const projects = ref([])
-
-// Fungsi untuk menentukan apakah gambar valid URL
-function isValidImageUrl(url) {
-  return typeof url === 'string' && url.startsWith('http')
-}
 
 onMounted(async () => {
   try {
-    const response = await axios.get('/api/projects') // gunakan path relatif agar berjalan di Vercel
+    const response = await axios.get('/api/projects')
     projects.value = response.data
   } catch (error) {
     console.error('Gagal mengambil data proyek:', error)
@@ -37,7 +41,7 @@ onMounted(async () => {
         >
           <!-- Gambar Proyek -->
           <img
-            :src="isValidImageUrl(project.image) ? project.image : fallbackImage"
+            :src="imageMap[project.image] || fallbackImage"
             :alt="`Gambar proyek ${project.title}`"
             class="w-full h-56 object-cover transition duration-300 hover:scale-105"
           />

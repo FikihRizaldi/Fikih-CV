@@ -26,9 +26,9 @@ const skills = [
     iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg'
   },
   {
-    name: 'CodeIgniter',
+    name: 'Express.js',
     level: 'Menengah',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain.svg'
+    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg'
   },
  {
   name: 'MySQL',

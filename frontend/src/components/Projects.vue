@@ -3,17 +3,23 @@ import { ref, onMounted } from 'vue'
 import axios from 'axios'
 import SectionTitle from './SectionTitle.vue'
 
-// Fallback jika tidak ada gambar
+// URL fallback jika gambar tidak ditemukan atau kosong
 const fallbackImage = 'https://via.placeholder.com/400x200?text=Gambar+Tidak+Tersedia'
 
+// State untuk menyimpan proyek
 const projects = ref([])
+
+// Fungsi untuk menentukan apakah gambar valid URL
+function isValidImageUrl(url) {
+  return typeof url === 'string' && url.startsWith('http')
+}
 
 onMounted(async () => {
   try {
-    const response = await axios.get('/api/projects') // GUNAKAN path relatif agar bisa jalan di Vercel
+    const response = await axios.get('/api/projects') // gunakan path relatif agar berjalan di Vercel
     projects.value = response.data
   } catch (error) {
-    console.error(error)
+    console.error('Gagal mengambil data proyek:', error)
   }
 })
 </script>
@@ -31,7 +37,7 @@ onMounted(async () => {
         >
           <!-- Gambar Proyek -->
           <img
-            :src="project.image || fallbackImage"
+            :src="isValidImageUrl(project.image) ? project.image : fallbackImage"
             :alt="`Gambar proyek ${project.title}`"
             class="w-full h-56 object-cover transition duration-300 hover:scale-105"
           />
@@ -59,6 +65,7 @@ onMounted(async () => {
 
             <!-- Link Proyek -->
             <a
+              v-if="project.link"
               :href="project.link"
               target="_blank"
               rel="noopener noreferrer"

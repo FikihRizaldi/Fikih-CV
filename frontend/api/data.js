@@ -49,14 +49,14 @@ export const skills = [
 export const projects = [
   {
     title: 'Website Profile Company Es Kimo',
-    image: 'https://raw.githubusercontent.com/FikihRizaldi/Fikih-CV/main/frontend/assets/eskimo.png',
+    image: 'eskimo', // ini adalah key untuk mencocokkan file di assets (eskimo.png)
     description: 'Platform profile perusahaan supplier es kristal',
     tech: ['CodeIgniter', 'Bootstrap', 'MySQL'],
     link: 'https://github.com/bagoongyoo/Final-Project-Web.git'
   },
   {
     title: 'Aplikasi Rental Motor',
-    image: 'https://raw.githubusercontent.com/FikihRizaldi/Fikih-CV/main/frontend/assets/rental.png',
+    image: 'rental', // ini juga key untuk rental.png
     description: 'Aplikasi Untuk Rental Motor',
     tech: ['C#'],
     link: 'https://github.com/FikihRizaldi/Sewa_motor.git'
